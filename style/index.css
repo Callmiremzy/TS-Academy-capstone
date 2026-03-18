@@ -1,0 +1,786 @@
+/* ===============================
+   RESET & GLOBAL STYLES
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #051540;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==== CONTAINER SYSTEM ==== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ====== HEADER ========= */
+.site-header {
+    padding: 1.5rem 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ====== HERO SECTION ======= */
+.hero-section {
+    padding: 3rem 0 5rem 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/* LEFT SIDE */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background-color: #164BAF;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1d5de0;
+}
+
+.btn-secondary {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #051540;
+}
+
+/* RIGHT SIDE */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    filter: drop-shadow(0 0 50px rgba(0, 174, 255, 0.4));
+}
+
+/* ======== PLANETARY DATA SECTION ============== */
+.presentation-section {
+    background-color: #ffffff;
+    padding: 6rem 0;
+}
+
+.presentation-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER AREA */
+.presentation-header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.presentation-header h2 {
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 600;
+    color: #1f4db8; /* Blue heading like screenshot */
+    margin-bottom: 1rem;
+}
+
+.presentation-header p {
+    font-size: clamp(15px, 1.1vw, 17px);
+    color: #5a5a5a;
+    line-height: 1.7;
+}
+
+.presentation-header span {
+    color: #1f4db8;
+    font-weight: 600;
+}
+
+/* VIDEO */
+.presentation-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation-video video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 24px;
+    display: block;
+}
+
+/* =========== VISUALIZATION SECTION ================== */
+.visualization-section {
+    background: #eaf2ff; /* light blue background like screenshot */
+    padding: 6rem 0;
+}
+
+/* HEADER */
+.visualization-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.visualization-header h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    color: #1f4db8;
+    margin-bottom: 1rem;
+}
+
+.visualization-header p {
+    color: #5c6a7a;
+    font-size: clamp(14px, 1.1vw, 16px);
+    line-height: 1.6;
+}
+
+/* GRID */
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* CARD */
+.planet-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.planet-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay */
+.planet-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+}
+
+.planet-overlay h5 {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.planet-overlay p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* ================= TABLE SECTION ================= */
+
+.facts-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+/* Section Title */
+.facts-section h2 {
+    color: #164BAF;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.facts-section p{
+    color: black;
+    width: 70%;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table Base */
+.planet-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Caption */
+.planet-table caption {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #111111;
+    margin-top: 40px;
+}
+
+/* Top Header Row */
+.planet-table thead tr {
+    background-color: #164BAF;
+    color: white;
+}
+
+.planet-table thead th {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid rgb(252, 251, 251);
+}
+
+/* Body Cells */
+.planet-table td {
+    background-color: #F2F7FF;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: 1px solid rgb(252, 251, 251);
+    color: black;
+}
+
+/* Category Columns (Terrestrial, Jovian, etc.) */
+.planet-table tbody th {
+    background-color: #D1E3FF;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid rgb(252, 251, 251);
+    color: black;
+}
+
+/* Horizontal Divider */
+hr {
+    width: 100%;
+    border: 1px solid #0059ff;
+    margin: 50px 0;
+}
+
+/* Top Left */
+.planet-table thead tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+/* Top Right */
+.planet-table thead tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+/* Bottom Left */
+.planet-table tbody tr:last-child td:first-child,
+.planet-table tbody tr:last-child th:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+/* Bottom Right */
+.planet-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.hr-wrapper {
+  background-color: white;
+  padding: 10px 0; /* space above and below line */
+}
+
+.custom-hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* CONTACT HEADER */
+
+.contact-header {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #164BAF;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* DESKTOP FORM LAYOUT */
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+    align-items: start;
+}
+
+/* Remove forced full width */
+.full-width {
+    grid-column: auto;
+}
+
+/* Row 1 */
+.contact-form .form-group:nth-child(1) { grid-column: 1; }
+.contact-form .form-group:nth-child(2) { grid-column: 2; }
+
+/* Row 2 */
+.contact-form .form-group:nth-child(3) { grid-column: 1; }
+.contact-form .form-group:nth-child(4) { grid-column: 2; }
+
+/* Row 3 */
+.contact-form .form-group:nth-child(5) { grid-column: 1; }
+.contact-form .form-group:nth-child(6) { grid-column: 2; }
+
+/* Row 4 */
+.contact-form .form-group:nth-child(7) { grid-column: 2; }
+
+/* Row 5 */
+.contact-form .form-group:nth-child(8) { 
+    grid-column: 1;
+    margin-top: 10px;
+}
+
+/* ============================= */
+/* FORM ELEMENTS */
+/* ============================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+label span {
+    color: #f10101;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #C7C7C7;
+    background-color: #F2F7FF;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #0059ff;
+    box-shadow: 0 0 6px rgba(0, 89, 255, 0.25);
+    background-color: #ffffff;
+}
+
+small {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+}
+
+
+/* RADIO & CHECKBOX */
+
+.group-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inline-options {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.inline-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+.radio{
+    margin: 20px;
+}
+
+.checkbox{
+    margin-top: -120px;
+    margin-left: 20px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 220px;
+    padding: 14px;
+    background: #164BAF;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0f3d91;
+}
+
+/* Arrow After text */
+
+.submit-btn::after {
+  content: "›"; 
+  /* margin-right: 18px; */
+  padding-left: 20px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* ======== FOOTER BASE STYLES ============= */
+
+.footer {
+  background-color: #081a3a; /* deep navy */
+  color: #ffffff;
+  padding: 40px 80px;
+  font-family: Arial, sans-serif;
+}
+
+.footer h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1; /* soft grey text */
+  max-width: 600px;
+}
+
+/* Divider */
+.footer hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background-color: #2c3e66;
+}
+
+/* ======= DESKTOP LAYOUT =========== */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8; /* light blue hover */
+}
+
+
+/* ============ RESPONSIVE DESIGN ========== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    
+    .header-wrapper {
+    justify-content: center; /* centers logo horizontally */
+    }
+
+    .logo img {
+    width: 100px;
+    }
+   
+    .hero-container {
+        gap: 2rem;
+    }
+
+    .planet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========= MOBILE HERO LAYOUT ==================== */
+
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 260px;
+        filter: drop-shadow(0 0 25px rgba(0, 174, 255, 0.6))
+            drop-shadow(0 0 75px rgba(0, 174, 255, 0.2));
+    }
+
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        max-width: 320px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 1.2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: 140px;
+    }
+     .presentation-section {
+        padding: 4rem 1rem;
+    }
+
+    .presentation-header {
+        margin-bottom: 2rem;
+    }
+
+    .presentation-header h2 {
+    font-size: clamp(28px, 3vw, 34px);
+    font-weight: 600;
+    color: #1f4db8; /* Blue heading like screenshot */
+    margin-bottom: 1rem;
+    }
+
+    .presentation-video video {
+        max-width: 100%;
+        border-radius: 18px;
+    }
+
+    .planet-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 1rem;
+    }
+
+    .visualization-section {
+        padding: 4rem 1.2rem;
+    }
+
+    .planet-overlay {
+        padding: 0.8rem;
+    }
+
+    .planet-overlay h5 {
+        font-size: 14px;
+    }
+
+    .planet-overlay p {
+        font-size: 12px;
+        display: none;
+    }
+
+    .planet-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .planet-card.uranus{
+        display: none;
+    }
+
+    .planet-card.neptune{
+        display: none;
+    }
+
+     .facts-section {
+        display: none;
+    }
+
+   .contact-form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form .form-group {
+        grid-column: 1 !important;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .contact-header {
+        text-align: center;
+    }
+
+    .contact-header h2 {
+        font-size: 24px;
+    }
+
+    .contact-header p {
+        font-size: 14px;
+    }
+
+    .radio{
+    margin: 0px;
+    }
+
+    .checkbox{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .hr-wrapper {
+        display: none;
+    }
+
+    .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
